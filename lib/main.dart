@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutterendpoint/get_data.dart';
 import 'package:flutterendpoint/post_data.dart';
+import 'package:flutterendpoint/put_patch_data.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      home: PostData(),
+      home: PutPatchData(),
     );
   }
 }

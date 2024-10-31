@@ -2,14 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert'; // Untuk menggunakan jsonEncode
 
-class PostData extends StatefulWidget {
-  const PostData({super.key});
+class PutPatchData extends StatefulWidget {
+  // Mengganti nama kelas
+  const PutPatchData({super.key});
 
   @override
-  State<PostData> createState() => _PostDataState();
+  State<PutPatchData> createState() =>
+      _PutPatchDataState(); // Mengganti referensi di sini
 }
 
-class _PostDataState extends State<PostData> {
+class _PutPatchDataState extends State<PutPatchData> {
+  // Mengganti referensi di sini
   TextEditingController nameC = TextEditingController();
   TextEditingController jobC = TextEditingController();
   String result = "";
@@ -32,8 +35,8 @@ class _PostDataState extends State<PostData> {
           ElevatedButton(
             onPressed: () async {
               // Mengirim data dalam format JSON
-              var response = await http.post(
-                Uri.parse("https://reqres.in/api/users"),
+              var response = await http.patch(
+                Uri.parse("https://reqres.in/api/users/2"),
                 headers: {
                   "Content-Type": "application/json", // Menambahkan header
                 },
