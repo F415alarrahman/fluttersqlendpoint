@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutterendpoint/autoget.dart';
 import 'package:flutterendpoint/get_data.dart';
 import 'package:flutterendpoint/post_data.dart';
 import 'package:flutterendpoint/put_patch_data.dart';
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      home: PutPatchData(),
+      home: Autoget(),
     );
   }
 }
